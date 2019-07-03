@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/09251b4d-e2aa-4e1d-a447-2abef1a761ec/resourceGroups/cdnRG/providers/Microsoft.Web/sites/cdnApp"
+}
