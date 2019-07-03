@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "profileName": {
+            "value": "cdnprofile_1"
+        },
+        "endpointName": {
+            "value": "cdnprofileendpoint_1"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "sku": {
+            "value": {
+                "name": "Standard_Akamai"
+            }
+        },
+        "profileProperties": {
+            "value": {}
+        },
+        "endpointProperties": {
+            "value": {
+                "isHttpAllowed": true,
+                "isHttpsAllowed": true,
+                "originHostHeader": "cdnapp.azurewebsites.net",
+                "origins": [
+                    {
+                        "name": "cdnapp-azurewebsites-net",
+                        "properties": {
+                            "hostName": "cdnapp.azurewebsites.net",
+                            "httpPort": 80,
+                            "httpsPort": 443
+                        }
+                    }
+                ],
+                "isCompressionEnabled": true,
+                "contentTypesToCompress": [
+                    "text/plain",
+                    "text/html",
+                    "text/css",
+                    "text/javascript",
+                    "application/x-javascript",
+                    "application/javascript",
+                    "application/json",
+                    "application/xml"
+                ]
+            }
+        }
+    }
+}
